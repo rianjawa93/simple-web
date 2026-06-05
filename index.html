@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="NexaStack Infrastructure — Solusi IT Infrastructure enterprise untuk cloud, data center, keamanan jaringan, dan managed services.">
   <title>NexaStack Infrastructure | Enterprise IT Solutions</title>
   <link rel="stylesheet" href="styles.css">
@@ -27,19 +27,23 @@
         <span class="logo-mark">NS</span>
         <span class="logo-text">NexaStack<span>Infrastructure</span></span>
       </a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-links">
         <li><a href="#home">Beranda</a></li>
         <li><a href="#services">Layanan</a></li>
         <li><a href="#solutions">Solusi</a></li>
         <li><a href="#about">Tentang</a></li>
         <li><a href="#contact">Kontak</a></li>
+        <li class="nav-cta-mobile">
+          <a href="#contact" class="btn btn-primary btn-full">Konsultasi Gratis</a>
+        </li>
       </ul>
       <a href="#contact" class="btn btn-primary btn-nav">Konsultasi Gratis</a>
-      <button class="menu-toggle" aria-label="Buka menu">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="nav-links">
         <span></span>
         <span></span>
         <span></span>
       </button>
+      <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
     </nav>
   </header>
 

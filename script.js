@@ -1,13 +1,24 @@
 const themeToggle = document.getElementById("theme-toggle");
 const themeIcon = themeToggle.querySelector(".theme-icon");
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+const navOverlay = document.getElementById("nav-overlay");
 const contactForm = document.getElementById("contact-form");
 const header = document.querySelector(".header");
 
 const savedTheme = localStorage.getItem("theme") || "dark";
 document.documentElement.setAttribute("data-theme", savedTheme);
 themeIcon.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+
+function setMenuOpen(open) {
+  navLinks.classList.toggle("open", open);
+  menuToggle.classList.toggle("active", open);
+  navOverlay.classList.toggle("visible", open);
+  document.body.classList.toggle("menu-open", open);
+  menuToggle.setAttribute("aria-expanded", String(open));
+  menuToggle.setAttribute("aria-label", open ? "Tutup menu" : "Buka menu");
+  navOverlay.setAttribute("aria-hidden", String(!open));
+}
 
 themeToggle.addEventListener("click", () => {
   const current = document.documentElement.getAttribute("data-theme");
@@ -18,11 +29,21 @@ themeToggle.addEventListener("click", () => {
 });
 
 menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
+  setMenuOpen(!navLinks.classList.contains("open"));
 });
 
+navOverlay.addEventListener("click", () => setMenuOpen(false));
+
 navLinks.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => navLinks.classList.remove("open"));
+  link.addEventListener("click", () => setMenuOpen(false));
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") setMenuOpen(false);
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 768) setMenuOpen(false);
 });
 
 contactForm.addEventListener("submit", (e) => {
