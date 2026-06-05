@@ -1,0 +1,21 @@
+# simple-web — landing page statis
+# Dockge: /opt/stacks/simple-web
+# UI: http://127.0.0.1:8088  →  https://simple-web.gisportal.id (Nginx)
+#
+# CI/CD: GitHub Actions build & push ke ghcr.io/rianjawa93/simple-web:latest
+# Server: docker compose pull && docker compose up -d
+
+services:
+  simple-web:
+    build: .
+    image: ghcr.io/rianjawa93/simple-web:latest
+    container_name: simple-web
+    restart: unless-stopped
+    ports:
+      - "8088:80"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
