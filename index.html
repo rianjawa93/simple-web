@@ -3,23 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Simple Web — halaman web sederhana dan modern">
-  <title>Simple Web</title>
+  <meta name="description" content="NexaStack Infrastructure — Solusi IT Infrastructure enterprise untuk cloud, data center, keamanan jaringan, dan managed services.">
+  <title>NexaStack Infrastructure | Enterprise IT Solutions</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <span>24/7 Network Operations Center</span>
+      <div class="top-bar-links">
+        <a href="tel:+622112345678">+62 21 1234 5678</a>
+        <a href="mailto:contact@nexastack.id">contact@nexastack.id</a>
+      </div>
+    </div>
+  </div>
+
   <header class="header">
-    <nav class="nav">
-      <a href="#" class="logo">Simple Web</a>
+    <nav class="nav container">
+      <a href="#" class="logo">
+        <span class="logo-mark">NS</span>
+        <span class="logo-text">NexaStack<span>Infrastructure</span></span>
+      </a>
       <ul class="nav-links">
         <li><a href="#home">Beranda</a></li>
+        <li><a href="#services">Layanan</a></li>
+        <li><a href="#solutions">Solusi</a></li>
         <li><a href="#about">Tentang</a></li>
-        <li><a href="#projects">Proyek</a></li>
         <li><a href="#contact">Kontak</a></li>
       </ul>
+      <a href="#contact" class="btn btn-primary btn-nav">Konsultasi Gratis</a>
       <button class="menu-toggle" aria-label="Buka menu">
         <span></span>
         <span></span>
@@ -30,117 +45,378 @@
 
   <main>
     <section id="home" class="hero">
-      <div class="hero-content">
-        <p class="hero-badge">Selamat datang</p>
-        <h1>Halaman web sederhana,<br>desain yang <span class="highlight">modern</span></h1>
-        <p class="hero-desc">
-          Proyek statis ringan yang siap di-host di GitHub Pages.
-          Cepat, responsif, dan mudah dikustomisasi.
-        </p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">Lihat Proyek</a>
-          <a href="https://github.com/rianjawa93" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Trusted by 500+ Enterprise Clients</p>
+          <h1>Membangun Infrastruktur IT yang <span class="highlight">Andal &amp; Skalabel</span></h1>
+          <p class="hero-desc">
+            Kami merancang, mengimplementasikan, dan mengelola infrastruktur teknologi
+            untuk organisasi berskala nasional — dari data center hingga cloud hybrid
+            dengan keamanan tingkat enterprise.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Mulai Konsultasi</a>
+            <a href="#services" class="btn btn-secondary">Jelajahi Layanan</a>
+          </div>
+          <div class="hero-trust">
+            <div class="trust-item">
+              <strong>99.99%</strong>
+              <span>Uptime SLA</span>
+            </div>
+            <div class="trust-item">
+              <strong>15+</strong>
+              <span>Tahun Pengalaman</span>
+            </div>
+            <div class="trust-item">
+              <strong>ISO 27001</strong>
+              <span>Certified</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="panel-header">
+            <span class="panel-dot"></span>
+            <span>Infrastructure Command Center</span>
+            <span class="panel-status">All Systems Operational</span>
+          </div>
+          <div class="panel-metrics">
+            <div class="metric">
+              <div class="metric-top">
+                <span>Server Uptime</span>
+                <span class="metric-value">99.99%</span>
+              </div>
+              <div class="metric-bar"><span style="width: 99.99%"></span></div>
+            </div>
+            <div class="metric">
+              <div class="metric-top">
+                <span>Network Latency</span>
+                <span class="metric-value">4.2ms</span>
+              </div>
+              <div class="metric-bar"><span style="width: 92%"></span></div>
+            </div>
+            <div class="metric">
+              <div class="metric-top">
+                <span>Security Score</span>
+                <span class="metric-value">A+</span>
+              </div>
+              <div class="metric-bar"><span style="width: 98%"></span></div>
+            </div>
+          </div>
+          <div class="panel-nodes">
+            <div class="node active">
+              <span class="node-icon">DC</span>
+              <div>
+                <strong>Data Center</strong>
+                <small>Jakarta · Surabaya</small>
+              </div>
+            </div>
+            <div class="node active">
+              <span class="node-icon">CL</span>
+              <div>
+                <strong>Cloud Hybrid</strong>
+                <small>AWS · Azure · GCP</small>
+              </div>
+            </div>
+            <div class="node active">
+              <span class="node-icon">SEC</span>
+              <div>
+                <strong>Security Ops</strong>
+                <small>SOC 24/7 Monitoring</small>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="card-stack">
-          <div class="floating-card card-1">
-            <span class="card-icon">⚡</span>
-            <span>Cepat</span>
-          </div>
-          <div class="floating-card card-2">
-            <span class="card-icon">📱</span>
-            <span>Responsif</span>
-          </div>
-          <div class="floating-card card-3">
-            <span class="card-icon">🎨</span>
-            <span>Modern</span>
-          </div>
+    </section>
+
+    <section class="partners">
+      <div class="container">
+        <p class="partners-label">Technology Partners</p>
+        <div class="partners-grid">
+          <span>Cisco</span>
+          <span>VMware</span>
+          <span>Microsoft Azure</span>
+          <span>AWS</span>
+          <span>Fortinet</span>
+          <span>Dell Technologies</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Layanan Kami</p>
+          <h2 class="section-title">Solusi Infrastruktur End-to-End</h2>
+          <p class="section-desc">
+            Dari perencanaan arsitektur hingga operasional harian — tim certified engineer
+            kami siap mendukung transformasi digital perusahaan Anda.
+          </p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="6" rx="1"/><rect x="2" y="11" width="20" height="6" rx="1"/><circle cx="6" cy="6" r="1" fill="currentColor"/><circle cx="6" cy="14" r="1" fill="currentColor"/></svg>
+            </div>
+            <h3>Data Center Solutions</h3>
+            <p>Desain, build, dan operasional data center Tier III/IV dengan redundansi penuh dan efisiensi energi optimal.</p>
+            <ul>
+              <li>Colocation &amp; Private Cloud</li>
+              <li>Disaster Recovery Site</li>
+              <li>Power &amp; Cooling Management</li>
+            </ul>
+          </article>
+          <article class="service-card featured">
+            <div class="service-badge">Most Popular</div>
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>Cloud &amp; Hybrid Infrastructure</h3>
+            <p>Migrasi cloud, multi-cloud orchestration, dan integrasi hybrid untuk workload mission-critical.</p>
+            <ul>
+              <li>Cloud Migration Strategy</li>
+              <li>Kubernetes &amp; Container Platform</li>
+              <li>Cost Optimization</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Network &amp; Cyber Security</h3>
+            <p>Arsitektur jaringan enterprise, zero-trust security, dan SOC monitoring berkelanjutan.</p>
+            <ul>
+              <li>SD-WAN &amp; MPLS</li>
+              <li>Firewall &amp; IDS/IPS</li>
+              <li>Penetration Testing</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            </div>
+            <h3>Managed IT Services</h3>
+            <p>Outsource operasional IT Anda ke tim NOC &amp; SOC bersertifikasi dengan SLA terukur.</p>
+            <ul>
+              <li>24/7 Monitoring &amp; Alerting</li>
+              <li>Incident &amp; Problem Management</li>
+              <li>ITIL-based Service Desk</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats-grid">
+        <div class="stat-item">
+          <span class="stat-number" data-target="500">0</span><span class="stat-suffix">+</span>
+          <p>Enterprise Clients</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="99">0</span><span class="stat-suffix">.99%</span>
+          <p>Average Uptime</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="120">0</span><span class="stat-suffix">+</span>
+          <p>Certified Engineers</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="24">0</span><span class="stat-suffix">/7</span>
+          <p>NOC Support</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Industri &amp; Solusi</p>
+          <h2 class="section-title">Dipercaya di Berbagai Sektor Kritis</h2>
+        </div>
+        <div class="solutions-grid">
+          <article class="solution-card">
+            <span class="solution-num">01</span>
+            <h3>Perbankan &amp; Fintech</h3>
+            <p>Infrastruktur compliant PCI-DSS dan OJK dengan high availability untuk transaksi real-time.</p>
+          </article>
+          <article class="solution-card">
+            <span class="solution-num">02</span>
+            <h3>Telekomunikasi</h3>
+            <p>Core network, backbone infrastructure, dan carrier-grade reliability untuk jutaan pengguna.</p>
+          </article>
+          <article class="solution-card">
+            <span class="solution-num">03</span>
+            <h3>Energi &amp; Pertambangan</h3>
+            <p>OT/IT convergence, edge computing, dan infrastruktur tahan kondisi operasional ekstrem.</p>
+          </article>
+          <article class="solution-card">
+            <span class="solution-num">04</span>
+            <h3>Pemerintahan</h3>
+            <p>Sovereign cloud, data residency, dan keamanan informasi sesuai standar nasional.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">Tentang</h2>
-        <p class="section-desc">
-          Simple Web adalah template halaman landing page yang dibuat dengan HTML, CSS, dan JavaScript murni.
-          Tanpa framework, tanpa build step — cukup buka file dan langsung jalan.
-        </p>
-        <div class="features">
-          <article class="feature">
-            <div class="feature-icon">🚀</div>
-            <h3>Zero Dependencies</h3>
-            <p>Tidak perlu npm install. Cukup clone repo dan buka di browser.</p>
-          </article>
-          <article class="feature">
-            <div class="feature-icon">🌙</div>
-            <h3>Dark Mode</h3>
-            <p>Toggle tema gelap/terang yang tersimpan di browser Anda.</p>
-          </article>
-          <article class="feature">
-            <div class="feature-icon">📦</div>
-            <h3>GitHub Ready</h3>
-            <p>Siap di-deploy ke GitHub Pages dengan satu klik.</p>
-          </article>
+      <div class="container about-grid">
+        <div class="about-content">
+          <p class="eyebrow">Tentang NexaStack</p>
+          <h2 class="section-title align-left">Partner Infrastruktur IT Terpercaya Sejak 2010</h2>
+          <p>
+            NexaStack Infrastructure adalah perusahaan konsultan dan penyedia layanan IT infrastructure
+            berskala enterprise. Kami membantu organisasi besar membangun fondasi teknologi yang
+            tangguh, aman, dan siap berkembang.
+          </p>
+          <p>
+            Dengan tim engineer bersertifikasi internasional dan pengalaman mendukung
+            mission-critical systems, kami menghadirkan solusi yang tidak hanya berjalan —
+            tetapi berjalan tanpa kompromi.
+          </p>
+          <div class="cert-badges">
+            <span>ISO 27001</span>
+            <span>ISO 20000</span>
+            <span>ITIL v4</span>
+            <span>AWS Advanced Partner</span>
+          </div>
+        </div>
+        <div class="about-cards">
+          <div class="about-card">
+            <h4>Misi</h4>
+            <p>Memberdayakan bisnis melalui infrastruktur IT yang reliable, secure, dan future-ready.</p>
+          </div>
+          <div class="about-card">
+            <h4>Visi</h4>
+            <p>Menjadi penyedia solusi infrastruktur IT terdepan di Asia Tenggara pada 2030.</p>
+          </div>
+          <div class="about-card highlight-card">
+            <h4>Mengapa Memilih Kami?</h4>
+            <ul>
+              <li>SLA uptime 99.99% terverifikasi</li>
+              <li>Tim on-site &amp; remote 24/7</li>
+              <li>Vendor-agnostic architecture</li>
+              <li>Transparent reporting &amp; governance</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">Proyek</h2>
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-tag">Web</div>
-            <h3>Portfolio</h3>
-            <p>Halaman portofolio pribadi untuk menampilkan karya dan skill Anda.</p>
-            <a href="#" class="project-link">Pelajari lebih lanjut →</a>
-          </article>
-          <article class="project-card">
-            <div class="project-tag">Landing</div>
-            <h3>Product Page</h3>
-            <p>Landing page produk dengan CTA yang jelas dan desain menarik.</p>
-            <a href="#" class="project-link">Pelajari lebih lanjut →</a>
-          </article>
-          <article class="project-card">
-            <div class="project-tag">Blog</div>
-            <h3>Personal Blog</h3>
-            <p>Template blog sederhana untuk berbagi tulisan dan pemikiran.</p>
-            <a href="#" class="project-link">Pelajari lebih lanjut →</a>
-          </article>
+    <section class="cta-banner">
+      <div class="container cta-inner">
+        <div>
+          <h2>Siap Mengoptimalkan Infrastruktur IT Anda?</h2>
+          <p>Tim solution architect kami siap melakukan assessment gratis untuk kebutuhan bisnis Anda.</p>
         </div>
+        <a href="#contact" class="btn btn-light">Jadwalkan Assessment</a>
       </div>
     </section>
 
     <section id="contact" class="section">
-      <div class="container">
-        <h2 class="section-title">Kontak</h2>
-        <p class="section-desc">Punya pertanyaan atau ingin berkolaborasi? Kirim pesan!</p>
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <p class="eyebrow">Hubungi Kami</p>
+          <h2 class="section-title align-left">Mari Diskusikan Kebutuhan Infrastruktur Anda</h2>
+          <p>Isi formulir di samping dan tim enterprise sales kami akan menghubungi Anda dalam 1×24 jam kerja.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <strong>Kantor Pusat</strong>
+              <span>Jl. Sudirman Kav. 52-53, Jakarta 12190</span>
+            </div>
+            <div class="contact-item">
+              <strong>Telepon</strong>
+              <a href="tel:+622112345678">+62 21 1234 5678</a>
+            </div>
+            <div class="contact-item">
+              <strong>Email</strong>
+              <a href="mailto:enterprise@nexastack.id">enterprise@nexastack.id</a>
+            </div>
+          </div>
+        </div>
         <form class="contact-form" id="contact-form">
-          <div class="form-group">
-            <label for="name">Nama</label>
-            <input type="text" id="name" name="name" placeholder="Nama Anda" required>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nama Lengkap</label>
+              <input type="text" id="name" name="name" placeholder="Nama Anda" required>
+            </div>
+            <div class="form-group">
+              <label for="company">Perusahaan</label>
+              <input type="text" id="company" name="company" placeholder="Nama perusahaan" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Korporat</label>
+              <input type="email" id="email" name="email" placeholder="nama@perusahaan.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Nomor Telepon</label>
+              <input type="tel" id="phone" name="phone" placeholder="+62 xxx xxxx xxxx">
+            </div>
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="email@contoh.com" required>
+            <label for="service">Layanan yang Diminati</label>
+            <select id="service" name="service">
+              <option value="">Pilih layanan</option>
+              <option>Data Center Solutions</option>
+              <option>Cloud &amp; Hybrid Infrastructure</option>
+              <option>Network &amp; Cyber Security</option>
+              <option>Managed IT Services</option>
+              <option>Lainnya</option>
+            </select>
           </div>
           <div class="form-group">
-            <label for="message">Pesan</label>
-            <textarea id="message" name="message" rows="4" placeholder="Tulis pesan Anda..." required></textarea>
+            <label for="message">Deskripsi Kebutuhan</label>
+            <textarea id="message" name="message" rows="4" placeholder="Ceritakan kebutuhan infrastruktur Anda..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+          <button type="submit" class="btn btn-primary btn-full">Kirim Permintaan Konsultasi</button>
         </form>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Simple Web. Dibuat dengan ❤️ untuk GitHub.</p>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-mark">NS</span>
+          <span class="logo-text">NexaStack<span>Infrastructure</span></span>
+        </a>
+        <p>Penyedia solusi IT infrastructure enterprise untuk organisasi yang menuntut keandalan, keamanan, dan skalabilitas tanpa kompromi.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Layanan</h4>
+        <ul>
+          <li><a href="#services">Data Center</a></li>
+          <li><a href="#services">Cloud Infrastructure</a></li>
+          <li><a href="#services">Network Security</a></li>
+          <li><a href="#services">Managed Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Perusahaan</h4>
+        <ul>
+          <li><a href="#about">Tentang Kami</a></li>
+          <li><a href="#solutions">Industri</a></li>
+          <li><a href="#contact">Karir</a></li>
+          <li><a href="#contact">Hubungi Kami</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Kebijakan Privasi</a></li>
+          <li><a href="#">Syarat &amp; Ketentuan</a></li>
+          <li><a href="#">SLA Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 NexaStack Infrastructure. All rights reserved.</p>
       <button class="theme-toggle" id="theme-toggle" aria-label="Ganti tema">
-        <span class="theme-icon">🌙</span>
+        <span class="theme-icon">☀️</span>
       </button>
     </div>
   </footer>

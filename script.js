@@ -3,12 +3,11 @@ const themeIcon = themeToggle.querySelector(".theme-icon");
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 const contactForm = document.getElementById("contact-form");
+const header = document.querySelector(".header");
 
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme) {
-  document.documentElement.setAttribute("data-theme", savedTheme);
-  themeIcon.textContent = savedTheme === "dark" ? "☀️" : "🌙";
-}
+const savedTheme = localStorage.getItem("theme") || "dark";
+document.documentElement.setAttribute("data-theme", savedTheme);
+themeIcon.textContent = savedTheme === "dark" ? "☀️" : "🌙";
 
 themeToggle.addEventListener("click", () => {
   const current = document.documentElement.getAttribute("data-theme");
@@ -29,11 +28,49 @@ navLinks.querySelectorAll("a").forEach((link) => {
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const name = document.getElementById("name").value;
-  alert(`Terima kasih, ${name}! Pesan Anda telah diterima.`);
+  const company = document.getElementById("company").value;
+  alert(`Terima kasih, ${name} dari ${company}! Tim kami akan menghubungi Anda dalam 1×24 jam kerja.`);
   contactForm.reset();
 });
 
-const header = document.querySelector(".header");
 window.addEventListener("scroll", () => {
   header.style.boxShadow = window.scrollY > 10 ? "var(--shadow)" : "none";
 });
+
+function animateCounter(el, target, duration = 2000) {
+  const isDecimal = String(target).includes(".");
+  const end = parseFloat(target);
+  const start = 0;
+  const startTime = performance.now();
+
+  function update(now) {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = start + (end - start) * eased;
+
+    el.textContent = isDecimal ? current.toFixed(2) : Math.floor(current);
+
+    if (progress < 1) requestAnimationFrame(update);
+    else el.textContent = isDecimal ? end.toFixed(2) : end;
+  }
+
+  requestAnimationFrame(update);
+}
+
+const statsObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll(".stat-number").forEach((el) => {
+          animateCounter(el, el.dataset.target);
+        });
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.3 }
+);
+
+const statsSection = document.querySelector(".stats");
+if (statsSection) statsObserver.observe(statsSection);
