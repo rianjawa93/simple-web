@@ -33,13 +33,13 @@ git init
 git add .
 git commit -m "Initial commit: simple web landing page"
 git branch -M main
-git remote add origin https://github.com/USERNAME/simple-web.git
+git remote add origin https://github.com/rianjawa93/simple-web.git
 git push -u origin main
 ```
 
 3. Di GitHub, buka **Settings → Pages**
 4. Pilih branch `main` dan folder `/ (root)`
-5. Simpan — situs akan live di `https://USERNAME.github.io/simple-web/`
+5. Simpan — situs akan live di `https://rianjawa93.github.io/simple-web/`
 
 ## Struktur
 
