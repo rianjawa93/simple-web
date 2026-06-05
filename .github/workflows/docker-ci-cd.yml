@@ -42,8 +42,10 @@ jobs:
 
       - name: Smoke test
         run: |
-          curl -fsS http://localhost:8088/ | grep -q "Simple Web"
+          curl -fsS -o /dev/null -w "%{http_code}" http://localhost:8088/ | grep -q "200"
+          curl -fsS http://localhost:8088/ | grep -qi "<html"
           curl -fsS -o /dev/null -w "%{http_code}" http://localhost:8088/styles.css | grep -q "200"
+          curl -fsS -o /dev/null -w "%{http_code}" http://localhost:8088/script.js | grep -q "200"
 
       - name: Stop container
         if: always()
